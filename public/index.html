@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parachutist Game</title>
+  <style>
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background-image: url('assets/images/sea.png'), url('assets/images/background.png');
+      background-position: bottom, top;
+      background-size: contain, contain;
+      background-repeat: no-repeat;
+      width: 800px;
+      height: 600px;
+    }
+
+    #lives {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-size: 40px;
+      color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    #score {
+      position: absolute;
+      top: 80px;
+      left: 30px;
+      font-size: 40px;
+      color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    #startButton {
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</head>
+
+<body>
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+  <div id="score">Score: 0</div>
+  <div id="lives">Lives: 3</div>
+  <button id="startButton">Start Game</button>
+  <script src="dist/controllers/main.js" type="module"></script>
+</body>
+
+</html>
